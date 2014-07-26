@@ -9,8 +9,24 @@ and open the template in the editor.
     <title>TODO supply a title</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+    <script>
+        function kayit(){
+            var kullaniciadi = document.getElementById('username').value;
+            if(var!=""){
+                $.ajax({
+                url:'kayit.php',
+                type:'POST',
+                data:'kullaniciadi' + username,
+                succes:function(e){alert(e)}
+                });
+            }
+        }
+    </script>
 </head>
 <body>
-<div>TODO write content</div>
+<div></div>
+<input type="text" id="username" name="username"/>
+<input type="submit" id="save" onclick="kayit()" name="save"/>
 </body>
 </html>
